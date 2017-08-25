@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/athbk/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayoutExample/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_63edec1bc37bd925f87a79a6f456cd6b3d53168d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayoutExample/ultimatetablayout/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="090b94eb04be071e12a009526fbcbaf417b93097">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayoutExample/app/build/intermediates/pre-dexed/debug/classes_2d46508092f4e392d81958abb67398a1b97e91d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/athbk/.android/build-cache/1030bb21b1ac5776a17e3e00f28cb647c152f3b5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayoutExample/app/build/intermediates/pre-dexed/debug/classes_2f3269ea94a78e7f9a39c383e6add454d78f008e.jar" />
+    </item>
+
+</items>

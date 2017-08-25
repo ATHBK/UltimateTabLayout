@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="UltimateTabLayout">
+        <attr name="tab_style" format="enum">
+            <enum name="sliding" value="1"></enum>
+            <enum name="fixed" value="2"></enum>
+        </attr>
+        
+        <attr name="tab_text_size" format="integer"/>
+        <attr name="tab_text_color" format="reference"/>
+        <attr name="tab_under_line_show" format="boolean"/>
+        <attr name="tab_under_line_color" format="color"/>
+        
+        <attr name="tab_width" format="integer"/>
+        <attr name="tab_height" format="integer"/>
+
+        <attr name="tab_padding_top" format="dimension"/>
+        <attr name="tab_padding_bottom" format="dimension"/>
+        <attr name="tab_padding_left" format="dimension"/>
+        <attr name="tab_padding_right" format="dimension"/>
+
+        <attr name="tab_width_icon" format="dimension"/>
+        <attr name="tab_height_icon" format="dimension"/>
+        
+        <attr name="tab_position_icon" format="enum">
+            <enum name="icon_left" value="0"/>
+            <enum name="icon_right" value="1"/>
+            <enum name="icon_top" value="2"/>
+            <enum name="icon_bottom" value="3"/>
+        </attr>
+
+        <attr name="tab_padding_icon" format="dimension"/>
+
+        <attr name="tab_orientation" format="enum">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>
