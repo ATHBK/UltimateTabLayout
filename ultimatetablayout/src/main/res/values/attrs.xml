@@ -6,13 +6,13 @@
             <enum name="fixed" value="2"></enum>
         </attr>
         
-        <attr name="tab_text_size" format="integer"/>
+        <attr name="tab_text_size" format="dimension"/>
         <attr name="tab_text_color" format="reference"/>
         <attr name="tab_under_line_show" format="boolean"/>
         <attr name="tab_under_line_color" format="color"/>
         
-        <attr name="tab_width" format="integer"/>
-        <attr name="tab_height" format="integer"/>
+        <attr name="tab_width" format="dimension"/>
+        <attr name="tab_height" format="dimension"/>
 
         <attr name="tab_padding_top" format="dimension"/>
         <attr name="tab_padding_bottom" format="dimension"/>
@@ -35,5 +35,6 @@
             <enum name="vertical" value="0"/>
             <enum name="horizontal" value="1"/>
         </attr>
+
     </declare-styleable>
 </resources>

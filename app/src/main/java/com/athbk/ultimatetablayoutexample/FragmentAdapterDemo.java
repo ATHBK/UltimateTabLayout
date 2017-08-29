@@ -25,7 +25,7 @@ public class FragmentAdapterDemo extends FragmentPagerAdapter implements IFTabAd
 
     @Override
     public int getCount() {
-        return 4;
+        return 3;
     }
 
     @Override
@@ -35,6 +35,6 @@ public class FragmentAdapterDemo extends FragmentPagerAdapter implements IFTabAd
 
     @Override
     public int getIcon(int position) {
-        return R.drawable.tab_1_selected;
+        return 0;
     }
 }

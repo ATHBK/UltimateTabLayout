@@ -1,6 +1,7 @@
 package com.athbk.ultimatetablayout;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.text.Layout;
@@ -18,7 +19,7 @@ import android.widget.TextView;
  * Created by athbk on 8/25/17.
  */
 
-public class TabView extends LinearLayout {
+public class TabView extends LinearLayout implements View.OnClickListener {
 
 
     private String title;
@@ -47,9 +48,15 @@ public class TabView extends LinearLayout {
 
     private int paddingIcon;
 
+    private int height;
+    private int width;
+
     private ImageView ivIcon;
     private TextView tvTitle;
 
+    private int currentPos;
+
+    private OnClickTabListener onClickTabListener;
 
     public TabView(Context context) {
         super(context);
@@ -64,10 +71,18 @@ public class TabView extends LinearLayout {
     }
 
     public void init(Context context){
-        LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        setLayoutParams(layoutParams);
-        setGravity(Gravity.CENTER);
-        setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
+        if (width == -1){
+            width = ViewGroup.LayoutParams.WRAP_CONTENT;
+        }
+        if (height == -1){
+            height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        }
+        LayoutParams layoutParams = new LayoutParams(width, height);
+
+        if (width == 0 || height == 0) {
+            layoutParams.weight = 1;
+        }
+
 
         if (icon != 0){
             ivIcon = new ImageView(context);
@@ -81,6 +96,8 @@ public class TabView extends LinearLayout {
             tvTitle.setText(title);
             tvTitle.setTextColor(textColor);
             tvTitle.setTextSize(textSize);
+            ViewGroup.LayoutParams textLayoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            tvTitle.setLayoutParams(textLayoutParams);
         }
 
 
@@ -89,29 +106,41 @@ public class TabView extends LinearLayout {
                 setOrientation(HORIZONTAL);
                 this.addSubView(ivIcon);
                 this.addSubView(tvTitle);
-                tvTitle.setPadding(paddingIcon, 0, 0, 0);
+                if (tvTitle!=null) {
+                    tvTitle.setPadding(paddingIcon, 0, 0, 0);
+                }
                 break;
             case 1:
                 setOrientation(HORIZONTAL);
                 this.addSubView(tvTitle);
                 this.addSubView(ivIcon);
-                tvTitle.setPadding(0, 0, paddingIcon, 0);
-
+                if (tvTitle!=null) {
+                    tvTitle.setPadding(0, 0, paddingIcon, 0);
+                }
                 break;
             case 2:
                 setOrientation(VERTICAL);
                 this.addSubView(ivIcon);
                 this.addSubView(tvTitle);
-                tvTitle.setPadding(0, paddingIcon, 0, 0);
-
+                if (tvTitle!=null) {
+                    tvTitle.setPadding(0, paddingIcon, 0, 0);
+                }
                 break;
             case 3:
                 setOrientation(VERTICAL);
                 this.addSubView(tvTitle);
                 this.addSubView(ivIcon);
-                tvTitle.setPadding(0, 0, 0, paddingIcon);
+                if (tvTitle!=null) {
+                    tvTitle.setPadding(0, 0, 0, paddingIcon);
+                }
                 break;
         }
+
+        this.setOnClickListener(this);
+
+        setLayoutParams(layoutParams);
+        setGravity(Gravity.CENTER);
+        setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
 //        requestLayout();
     }
 
@@ -175,5 +204,28 @@ public class TabView extends LinearLayout {
 
     public void setPaddingIcon(int paddingIcon) {
         this.paddingIcon = paddingIcon;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setOnClickTabListener(OnClickTabListener onClickTabListener) {
+        this.onClickTabListener = onClickTabListener;
+    }
+
+    public void setCurrentPos(int currentPos) {
+        this.currentPos = currentPos;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (onClickTabListener != null){
+            onClickTabListener.onClickTab(currentPos);
+        }
     }
 }
