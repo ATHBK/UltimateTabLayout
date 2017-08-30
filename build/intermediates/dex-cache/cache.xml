@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/tranquanghung/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_638c5f8c3f87f71f9b8058602d3b941ebf088257.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/tranquanghung/.android/build-cache/68a2c878b6d145cfdbfa7cfc937309327dbca47e/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -12,21 +21,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/ultimatetablayout/build/intermediates/bundles/default/classes.jar"
+        jar="/Users/tranquanghung/.android/build-cache/7d6b846ec9c5adfa157bc7a51825c334a878cacc/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.3"
-        sha1="436bdfa1f37c1b5989cddcceadaec98678ba1486">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_c0242313bdb6e3771b8c5626019c1cae4ec29fdf.jar" />
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_f451146cfa6b5202d00cadc2d29315538f39edf4.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/tranquanghung/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jar="/Users/tranquanghung/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.3"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_638c5f8c3f87f71f9b8058602d3b941ebf088257.jar" />
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_7ae661b28335024d72a4854180352aeb3045b748.jar" />
     </item>
     <item
         is-multidex="false"
@@ -39,30 +48,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/tranquanghung/.android/build-cache/bbbcf207d8279f0a51b17bdb0ad0547a2c738813/output/jars/classes.jar"
+        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/ultimatetablayout/build/intermediates/bundles/default/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.3"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_af1e97fbe9625c692fa8e76105434779eeb5b5ae.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/tranquanghung/.android/build-cache/8ccaf0017a98fa1bf3a236317398acf5bac748d5/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_220ba6084cb305cbfa172f44113d911c44e57241.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/tranquanghung/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_7ae661b28335024d72a4854180352aeb3045b748.jar" />
+        revision="25.0.2"
+        sha1="436bdfa1f37c1b5989cddcceadaec98678ba1486">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_c0242313bdb6e3771b8c5626019c1cae4ec29fdf.jar" />
     </item>
     <item
         is-multidex="false"
@@ -84,6 +75,132 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/b251594d3d8ba17fdcf4afc4afa93ad533b70030/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_153f97057df2a68d2f8a67b9473b0073d1da0ae9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/7b7d2f26d62dfb311ca65b26dcf2238120868834/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_ff0ad271e11d85ee734c3bc2aaef4ef6ddd9c8dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/b251594d3d8ba17fdcf4afc4afa93ad533b70030/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_153f97057df2a68d2f8a67b9473b0073d1da0ae9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/ultimatetablayout/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="436bdfa1f37c1b5989cddcceadaec98678ba1486">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_c0242313bdb6e3771b8c5626019c1cae4ec29fdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_638c5f8c3f87f71f9b8058602d3b941ebf088257.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/bbbcf207d8279f0a51b17bdb0ad0547a2c738813/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_af1e97fbe9625c692fa8e76105434779eeb5b5ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/bd6d57191156b55f6a8bb58af2c69934ae46843e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_0547165afa5121ec285b7ba0c93260c15c33a4fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/68a2c878b6d145cfdbfa7cfc937309327dbca47e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_32c87e6f8e973446366ade3f53354bb9abe92077.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/8ccaf0017a98fa1bf3a236317398acf5bac748d5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_220ba6084cb305cbfa172f44113d911c44e57241.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/985ca8dcc944a3a1b72a34461c9afe39ee59cdd2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_3e8dd86bc63137976320a00b07f8d75b674d82a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_7ae661b28335024d72a4854180352aeb3045b748.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/7b7d2f26d62dfb311ca65b26dcf2238120868834/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_ff0ad271e11d85ee734c3bc2aaef4ef6ddd9c8dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/b436a145d0ad13bc68ae3c6d92a490f863bcdf14/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_5437d401dd27140df15e3e5f66902b8e50f3858b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/tranquanghung/.android/build-cache/8ccaf0017a98fa1bf3a236317398acf5bac748d5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_220ba6084cb305cbfa172f44113d911c44e57241.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/tranquanghung/.android/build-cache/bd6d57191156b55f6a8bb58af2c69934ae46843e/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -102,21 +219,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/tranquanghung/.android/build-cache/b251594d3d8ba17fdcf4afc4afa93ad533b70030/output/jars/classes.jar"
+        jar="/Users/tranquanghung/.android/build-cache/bbbcf207d8279f0a51b17bdb0ad0547a2c738813/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.3"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_153f97057df2a68d2f8a67b9473b0073d1da0ae9.jar" />
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_af1e97fbe9625c692fa8e76105434779eeb5b5ae.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/tranquanghung/.android/build-cache/7b7d2f26d62dfb311ca65b26dcf2238120868834/output/jars/classes.jar"
+        jar="/Users/tranquanghung/.android/build-cache/74fb2e6a2a07a4719279ce72ee4ff2bc93862593/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.3"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_ff0ad271e11d85ee734c3bc2aaef4ef6ddd9c8dd.jar" />
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/classes_5273568b6307777b5236343b9b7d4ad0b096d5f5.jar" />
     </item>
 
 </items>
