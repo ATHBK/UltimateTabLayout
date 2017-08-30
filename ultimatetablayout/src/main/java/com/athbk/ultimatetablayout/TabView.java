@@ -2,6 +2,7 @@ package com.athbk.ultimatetablayout;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.text.Layout;
@@ -94,7 +95,12 @@ public class TabView extends LinearLayout implements View.OnClickListener {
         if (!TextUtils.isEmpty(title)){
             tvTitle = new TextView(context);
             tvTitle.setText(title);
-            tvTitle.setTextColor(getResources().getColorStateList(textColor));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                tvTitle.setTextColor(getResources().getColorStateList(textColor, context.getTheme()));
+            }
+            else {
+                tvTitle.setTextColor(getResources().getColorStateList(textColor));
+            }
             tvTitle.setTextSize(textSize);
             ViewGroup.LayoutParams textLayoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             tvTitle.setLayoutParams(textLayoutParams);
