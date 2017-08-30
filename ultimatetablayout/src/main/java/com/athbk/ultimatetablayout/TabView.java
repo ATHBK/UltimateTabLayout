@@ -94,7 +94,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
         if (!TextUtils.isEmpty(title)){
             tvTitle = new TextView(context);
             tvTitle.setText(title);
-            tvTitle.setTextColor(textColor);
+            tvTitle.setTextColor(getResources().getColorStateList(textColor));
             tvTitle.setTextSize(textSize);
             ViewGroup.LayoutParams textLayoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             tvTitle.setLayoutParams(textLayoutParams);

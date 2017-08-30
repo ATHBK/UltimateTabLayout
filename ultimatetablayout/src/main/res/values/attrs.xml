@@ -3,7 +3,7 @@
     <declare-styleable name="UltimateTabLayout">
         <attr name="tab_style" format="enum">
             <enum name="sliding" value="1"></enum>
-            <enum name="fixed" value="2"></enum>
+                <enum name="fixed" value="2"></enum>
         </attr>
         
         <attr name="tab_text_size" format="dimension"/>
