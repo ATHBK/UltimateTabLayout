@@ -56,7 +56,7 @@ Add this to your module's `build.gradle` file:
 
 ```gradle
 dependencies {
-	compile 'com.github.ATHBK:UltimateTabLayout:1.1'
+	compile 'com.github.ATHBK:UltimateTabLayout:1.2'
 }
 ```
 
@@ -116,7 +116,7 @@ or tab_height = "0dp" with tab_orientation = "vertical"
 How to use in . 
 
 ```java	
-	      adapter = new FragmentAdapterDemo(getSupportFragmentManager());
+	adapter = new FragmentAdapterDemo(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         tabLayout.setViewPager(viewPager, adapter);
 ```
