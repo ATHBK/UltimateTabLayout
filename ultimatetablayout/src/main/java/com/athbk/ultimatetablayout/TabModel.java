@@ -6,7 +6,7 @@ package com.athbk.ultimatetablayout;
 
 public class TabModel {
 
-    private int tabTextSize;
+    private float tabTextSize;
     private int tabTextColor;
 
     private boolean tabUnderLineShow;
@@ -53,7 +53,7 @@ public class TabModel {
     }
 
     public static class Builder {
-        private int tabTextSize;
+        private float tabTextSize;
         private int tabTextColor;
 
         private boolean tabUnderLineShow;
@@ -81,7 +81,7 @@ public class TabModel {
             this.tabOrientation = tabOrientation;
         }
 
-        public Builder setTabTextSize(int tabTextSize){
+        public Builder setTabTextSize(float tabTextSize){
             this.tabTextSize = tabTextSize;
             return this;
         }
@@ -147,7 +147,7 @@ public class TabModel {
     }
 
 
-    public int getTabTextSize() {
+    public float getTabTextSize() {
         return tabTextSize;
     }
 

@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.text.Layout;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
      */
     private int positionIcon;
 
-    private int textSize;
+    private float textSize;
     private int textColor;
 
     private int heightIcon;
@@ -88,7 +89,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
         if (icon != 0){
             ivIcon = new ImageView(context);
             ivIcon.setImageResource(icon);
-            LayoutParams params = new LayoutParams((int)widthIcon, (int)heightIcon);
+            LayoutParams params = new LayoutParams(widthIcon, heightIcon);
             ivIcon.setLayoutParams(params);
         }
 
@@ -101,7 +102,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
             else {
                 tvTitle.setTextColor(getResources().getColorStateList(textColor));
             }
-            tvTitle.setTextSize(textSize);
+            tvTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
             ViewGroup.LayoutParams textLayoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             tvTitle.setLayoutParams(textLayoutParams);
         }
@@ -176,7 +177,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
         this.positionIcon = positionIcon;
     }
 
-    public void setTextSize(int textSize) {
+    public void setTextSize(float textSize) {
         this.textSize = textSize;
     }
 

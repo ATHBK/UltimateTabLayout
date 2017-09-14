@@ -77,7 +77,7 @@ public class UltimateTabLayout extends FrameLayout {
     private void init(Context context, AttributeSet attrs, int def){
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.UltimateTabLayout, def, 0);
         tabStyle = ta.getInt(R.styleable.UltimateTabLayout_tab_style, DEFAULT_TAB_STYLE);
-        tabTextSize = ta.getDimension(R.styleable.UltimateTabLayout_tab_text_size, 14f);
+        tabTextSize = ta.getFloat(R.styleable.UltimateTabLayout_tab_text_size, 14f);
         tabTextColor = ta.getResourceId(R.styleable.UltimateTabLayout_tab_text_color, R.color.tab_color_selected_default);
         tabUnderLineShow = ta.getBoolean(R.styleable.UltimateTabLayout_tab_under_line_show, true);
         tabUnderLineColor = ta.getColor(R.styleable.UltimateTabLayout_tab_under_line_color, DEFAULT_COLOR_UNDER_LINE);
@@ -85,16 +85,16 @@ public class UltimateTabLayout extends FrameLayout {
         tabHeight = ta.getDimension(R.styleable.UltimateTabLayout_tab_height, -1);
         tabWidth = ta.getDimension(R.styleable.UltimateTabLayout_tab_width, -1);
 
-        tabPaddingLeft = ta.getDimension(R.styleable.UltimateTabLayout_tab_padding_left, DEFAULT_PADDING);
-        tabPaddingRight = ta.getDimension(R.styleable.UltimateTabLayout_tab_padding_right, DEFAULT_PADDING);
-        tabPaddingTop = ta.getDimension(R.styleable.UltimateTabLayout_tab_padding_top, DEFAULT_PADDING);
-        tabPaddingBottom = ta.getDimension(R.styleable.UltimateTabLayout_tab_padding_bottom, DEFAULT_PADDING);
+        tabPaddingLeft = ta.getFloat(R.styleable.UltimateTabLayout_tab_padding_left, DEFAULT_PADDING);
+        tabPaddingRight = ta.getFloat(R.styleable.UltimateTabLayout_tab_padding_right, DEFAULT_PADDING);
+        tabPaddingTop = ta.getFloat(R.styleable.UltimateTabLayout_tab_padding_top, DEFAULT_PADDING);
+        tabPaddingBottom = ta.getFloat(R.styleable.UltimateTabLayout_tab_padding_bottom, DEFAULT_PADDING);
 
         tabPositionIcon = ta.getInt(R.styleable.UltimateTabLayout_tab_position_icon, 0);
-        tabPaddingIcon = ta.getDimension(R.styleable.UltimateTabLayout_tab_padding_icon, DEFAULT_PADDING);
+        tabPaddingIcon = ta.getFloat(R.styleable.UltimateTabLayout_tab_padding_icon, DEFAULT_PADDING);
 
-        tabWidthIcon = ta.getDimension(R.styleable.UltimateTabLayout_tab_width_icon, DEFAULT_SIZE_ICON);
-        tabHeightIcon = ta.getDimension(R.styleable.UltimateTabLayout_tab_height_icon, DEFAULT_SIZE_ICON);
+        tabWidthIcon = ta.getFloat(R.styleable.UltimateTabLayout_tab_width_icon, DEFAULT_SIZE_ICON);
+        tabHeightIcon = ta.getFloat(R.styleable.UltimateTabLayout_tab_height_icon, DEFAULT_SIZE_ICON);
 
         tabOrientation = ta.getInt(R.styleable.UltimateTabLayout_tab_orientation, HORIZONTAL);
 
@@ -119,7 +119,7 @@ public class UltimateTabLayout extends FrameLayout {
                 .setTabWidthIcon(tabWidthIcon)
                 .setTabPositionIcon(tabPositionIcon)
                 .setTabTextColor(tabTextColor)
-                .setTabTextSize((int)tabTextSize)
+                .setTabTextSize(tabTextSize)
                 .build();
 
 
