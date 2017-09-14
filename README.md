@@ -56,7 +56,7 @@ Add this to your module's `build.gradle` file:
 
 ```gradle
 dependencies {
-	compile 'com.github.ATHBK:UltimateTabLayout:1.2'
+	compile 'com.github.ATHBK:UltimateTabLayout:1.2.1'
 }
 ```
 
@@ -88,7 +88,7 @@ There are several other attributes that can be used to configure color text, ico
 | Attrrs              |                           |  type   | option                                           |
 | --------------------|:-------------------------:|---------|--------------------------------------------------|
 | tab_style           | style of tab layout       |enum     |sliding or fixed                                  |
-| tab_text_size       | size of text              |dimension|                                                  |
+| tab_text_size       | size of text              |float    |                                                  |
 | tab_text_color      | color of text             |reference|                                                  |
 | tab_under_line_show | visible of under line     |boolean  |                                                  |
 | tab_under_line_color| color of under line       |color    |                                                  |
@@ -97,7 +97,7 @@ There are several other attributes that can be used to configure color text, ico
 | tab_padding_top     | padding top in tab        |dimension|                                                  |
 | tab_padding_bottom  | padding bottom in tab     |dimension|                                                  |
 | tab_padding_left    | padding left in tab       |dimension|                                                  |
-|tab_padding_right	  | padding right in tab      |dimension|                                                  |
+|tab_padding_righ     | padding right in tab      |dimension|                                                  |
 |tab_width_icon	      | width of icon             |dimension|                                                  |
 |tab_height_icon      | height of icon            |dimension|                                                  |
 |tab_position_icon    | posistion of icon for text|enum     |icon_left or icon_right or icon_top or icon_bottom|
