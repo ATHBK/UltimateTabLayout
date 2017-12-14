@@ -36,5 +36,6 @@
             <enum name="horizontal" value="1"/>
         </attr>
 
+        <attr name="tab_height_under_line" format="dimension"/>
     </declare-styleable>
 </resources>

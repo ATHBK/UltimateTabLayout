@@ -19,7 +19,7 @@ public class UltimateTabLayout extends FrameLayout {
     private final int DEFAULT_TAB_STYLE = 2; // style fixed.
     private final int DEFAULT_PADDING = 16;
     private final int DEFAULT_SIZE_ICON = 50;
-    private final int DEFAULT_WIDTH_UNDER_LINE = 5;
+    private final int DEFAULT_HEIGHT_UNDER_LINE = 5;
 
     public final static int VERTICAL = 0;
     public final static int HORIZONTAL = 1;
@@ -35,6 +35,7 @@ public class UltimateTabLayout extends FrameLayout {
 
     private boolean tabUnderLineShow;
     private int tabUnderLineColor;
+    private float heightUnderLine;
 
     private float tabWidth;
     private float tabHeight;
@@ -79,8 +80,10 @@ public class UltimateTabLayout extends FrameLayout {
         tabStyle = ta.getInt(R.styleable.UltimateTabLayout_tab_style, DEFAULT_TAB_STYLE);
         tabTextSize = ta.getFloat(R.styleable.UltimateTabLayout_tab_text_size, 14f);
         tabTextColor = ta.getResourceId(R.styleable.UltimateTabLayout_tab_text_color, R.color.tab_color_selected_default);
+
         tabUnderLineShow = ta.getBoolean(R.styleable.UltimateTabLayout_tab_under_line_show, true);
         tabUnderLineColor = ta.getColor(R.styleable.UltimateTabLayout_tab_under_line_color, DEFAULT_COLOR_UNDER_LINE);
+        heightUnderLine = ta.getDimension(R.styleable.UltimateTabLayout_tab_height_under_line, DEFAULT_HEIGHT_UNDER_LINE);
 
         tabHeight = ta.getDimension(R.styleable.UltimateTabLayout_tab_height, -1);
         tabWidth = ta.getDimension(R.styleable.UltimateTabLayout_tab_width, -1);
@@ -98,6 +101,8 @@ public class UltimateTabLayout extends FrameLayout {
 
         tabOrientation = ta.getInt(R.styleable.UltimateTabLayout_tab_orientation, HORIZONTAL);
 
+
+
         mPaintUnderLine = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaintUnderLine.setColor(tabUnderLineColor);
 
@@ -107,7 +112,7 @@ public class UltimateTabLayout extends FrameLayout {
     }
 
     public void setViewPager(final ViewPager viewPager, IFTabAdapter tabAdapterIF){
-        TabModel tabModel = new TabModel.Builder(tabUnderLineShow, DEFAULT_WIDTH_UNDER_LINE, tabOrientation)
+        TabModel tabModel = new TabModel.Builder(tabUnderLineShow, (int) heightUnderLine, tabOrientation)
                 .setTabHeight((int)tabHeight)
                 .setTabHeightIcon(tabHeightIcon)
                 .setTabPaddingBottom(tabPaddingBottom)
@@ -213,5 +218,9 @@ public class UltimateTabLayout extends FrameLayout {
 
     public void setTabOrientation(int tabOrientation) {
         this.tabOrientation = tabOrientation;
+    }
+
+    public void setHeightUnderLine(float heightUnderLine) {
+        this.heightUnderLine = heightUnderLine;
     }
 }

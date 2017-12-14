@@ -15,6 +15,7 @@
         app:tab_width="0dp"
         app:tab_under_line_color="@color/colorPrimaryDark"
         app:tab_text_size="10"
+        app:tab_height_under_line="16dp"
         />
 
     <android.support.v4.view.ViewPager
