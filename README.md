@@ -58,7 +58,7 @@ Add this to your module's `build.gradle` file:
 
 ```gradle
 dependencies {
-	compile 'com.github.ATHBK:UltimateTabLayout:1.2.2'
+	compile 'com.github.ATHBK:UltimateTabLayout:1.2.3'
 }
 ```
 
@@ -105,7 +105,7 @@ There are several other attributes that can be used to configure color text, ico
 |tab_position_icon    | posistion of icon for text|enum     |icon_left or icon_right or icon_top or icon_bottom|
 |tab_padding_icon     | padding icon for text     |dimension|                                                  |
 |tab_orientation      | orientation of each tab   |enum     |vertical or horizontal                            |
-
+|tab_height_under_line| height of under line 	  |dimension|update version 1.2.3                              |
 * Tip: only use for style's fixed.
 If you want to auto align, you will tab_width = "0dp" with tab_orientation = "horizontal"
 or tab_height = "0dp" with tab_orientation = "vertical"
