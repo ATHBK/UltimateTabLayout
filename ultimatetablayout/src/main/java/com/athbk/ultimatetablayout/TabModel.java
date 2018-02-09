@@ -28,6 +28,8 @@ public class TabModel {
 
     private int tabOrientation;
 
+    private String tabResourceFont; // update version 1.2.4
+
     public TabModel(Builder builder){
         this.tabTextSize = builder.tabTextSize;
         this.tabTextColor = builder.tabTextColor;
@@ -50,6 +52,8 @@ public class TabModel {
         this.tabWidthIcon = builder.tabWidthIcon;
 
         this.tabOrientation = builder.tabOrientation;
+
+        this.tabResourceFont = builder.tabResourceFont;
     }
 
     public static class Builder {
@@ -74,6 +78,8 @@ public class TabModel {
         private float tabWidthIcon;
 
         private int tabOrientation;
+
+        private String tabResourceFont; // update version 1.2.4
 
         public Builder(boolean tabUnderLineShow, int tabHeightUnderLine, int tabOrientation) {
             this.tabUnderLineShow = tabUnderLineShow;
@@ -141,6 +147,11 @@ public class TabModel {
             return this;
         }
 
+        public Builder setTabResourceFont(String tabResourceFont) {
+            this.tabResourceFont = tabResourceFont;
+            return this;
+        }
+
         public TabModel build(){
             return new TabModel(this);
         }
@@ -205,5 +216,9 @@ public class TabModel {
 
     public int getTabOrientation() {
         return tabOrientation;
+    }
+
+    public String getTabResourceFont() {
+        return tabResourceFont;
     }
 }

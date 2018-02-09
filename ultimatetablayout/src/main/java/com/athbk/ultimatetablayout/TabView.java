@@ -2,6 +2,7 @@ package com.athbk.ultimatetablayout;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
@@ -56,6 +57,8 @@ public class TabView extends LinearLayout implements View.OnClickListener {
     private ImageView ivIcon;
     private TextView tvTitle;
 
+    private String tabResourceFont;
+
     private int currentPos;
 
     private OnClickTabListener onClickTabListener;
@@ -105,6 +108,16 @@ public class TabView extends LinearLayout implements View.OnClickListener {
             tvTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
             ViewGroup.LayoutParams textLayoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             tvTitle.setLayoutParams(textLayoutParams);
+        }
+
+        if (!TextUtils.isEmpty(tabResourceFont)){
+            try {
+                Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), tabResourceFont);
+                tvTitle.setTypeface(typeface);
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
         }
 
 
@@ -219,6 +232,10 @@ public class TabView extends LinearLayout implements View.OnClickListener {
 
     public void setWidth(int width) {
         this.width = width;
+    }
+
+    public void setTabResourceFont(String tabResourceFont) {
+        this.tabResourceFont = tabResourceFont;
     }
 
     public void setOnClickTabListener(OnClickTabListener onClickTabListener) {

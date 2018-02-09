@@ -37,5 +37,6 @@
         </attr>
 
         <attr name="tab_height_under_line" format="dimension"/>
+        <attr name="tab_resource_font" format="string"/>
     </declare-styleable>
 </resources>
