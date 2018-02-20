@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tab_orientation="horizontal"
-        app:tab_style="fixed"
+        app:tab_style="sliding"
         app:tab_position_icon="icon_left"
-        app:tab_width="0dp"
         app:tab_under_line_color="@color/colorPrimaryDark"
         app:tab_text_size="10"
         app:tab_height_under_line="2dp"
         app:tab_resource_font="font/Roboto-BoldItalic.ttf"
+        app:tab_width="0dp"
         />
 
     <android.support.v4.view.ViewPager

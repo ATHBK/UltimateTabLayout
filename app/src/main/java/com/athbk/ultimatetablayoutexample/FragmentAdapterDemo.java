@@ -25,7 +25,7 @@ public class FragmentAdapterDemo extends FragmentPagerAdapter implements IFTabAd
 
     @Override
     public int getCount() {
-        return 3;
+        return 8;
     }
 
     @Override
