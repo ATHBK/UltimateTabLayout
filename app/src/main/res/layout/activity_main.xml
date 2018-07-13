@@ -16,7 +16,8 @@
         app:tab_text_size="10"
         app:tab_height_under_line="2dp"
         app:tab_resource_font="font/Roboto-BoldItalic.ttf"
-        app:tab_width="0dp"
+        app:tab_width="100dp"
+        app:tab_text_color="@color/tab_color_seleted"
         />
 
     <android.support.v4.view.ViewPager

@@ -30,6 +30,8 @@ public class FixTabView extends LinearLayout implements ViewPager.OnPageChangeLi
 
     private int current = 0;
 
+    private OnClickTabListener onClickTabListener;
+
 
     public FixTabView(Context context) {
         super(context);
@@ -141,7 +143,13 @@ public class FixTabView extends LinearLayout implements ViewPager.OnPageChangeLi
                 tabView.setOnClickTabListener(new OnClickTabListener() {
                     @Override
                     public void onClickTab(int currentPos) {
-                        viewPager.setCurrentItem(currentPos);
+                        if (onClickTabListener == null) {
+                            viewPager.setCurrentItem(currentPos);
+                        }
+                        else {
+                            onClickTabListener.onClickTab(currentPos);
+                        }
+
                     }
                 });
                 tabView.init(context);
@@ -164,5 +172,9 @@ public class FixTabView extends LinearLayout implements ViewPager.OnPageChangeLi
 
     public void setTabModel(TabModel tabModel) {
         this.tabModel = tabModel;
+    }
+
+    public void setOnClickTabListener(OnClickTabListener onClickTabListener) {
+        this.onClickTabListener = onClickTabListener;
     }
 }

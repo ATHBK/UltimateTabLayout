@@ -33,6 +33,8 @@ public class VerticalSlingTabView extends ScrollView implements ViewPager.OnPage
 
     private LinearLayout containerView;
 
+    private OnClickTabListener onClickTabListener;
+
     public VerticalSlingTabView(Context context) {
         super(context);
         this.context = context;
@@ -154,7 +156,12 @@ public class VerticalSlingTabView extends ScrollView implements ViewPager.OnPage
                 tabView.setOnClickTabListener(new OnClickTabListener() {
                     @Override
                     public void onClickTab(int currentPos) {
-                        viewPager.setCurrentItem(currentPos);
+                        if (onClickTabListener == null) {
+                            viewPager.setCurrentItem(currentPos);
+                        }
+                        else {
+                            onClickTabListener.onClickTab(currentPos);
+                        }
                     }
                 });
                 tabView.init(context);
@@ -198,4 +205,7 @@ public class VerticalSlingTabView extends ScrollView implements ViewPager.OnPage
         this.tabModel = tabModel;
     }
 
+    public void setOnClickTabListener(OnClickTabListener onClickTabListener) {
+        this.onClickTabListener = onClickTabListener;
+    }
 }

@@ -34,6 +34,9 @@ public class HorizontalSlingTabView extends HorizontalScrollView implements View
 
     private LinearLayout containerView;
 
+    private OnClickTabListener onClickTabListener;
+
+
     public HorizontalSlingTabView(Context context) {
         super(context);
         init(context);
@@ -160,7 +163,12 @@ public class HorizontalSlingTabView extends HorizontalScrollView implements View
                 tabView.setOnClickTabListener(new OnClickTabListener() {
                     @Override
                     public void onClickTab(int currentPos) {
-                        viewPager.setCurrentItem(currentPos);
+                        if (onClickTabListener == null) {
+                            viewPager.setCurrentItem(currentPos);
+                        }
+                        else {
+                            onClickTabListener.onClickTab(currentPos);
+                        }
                     }
                 });
                 tabView.init(context);
@@ -203,7 +211,7 @@ public class HorizontalSlingTabView extends HorizontalScrollView implements View
         this.tabModel = tabModel;
     }
 
-
-
-
+    public void setOnClickTabListener(OnClickTabListener onClickTabListener) {
+        this.onClickTabListener = onClickTabListener;
+    }
 }

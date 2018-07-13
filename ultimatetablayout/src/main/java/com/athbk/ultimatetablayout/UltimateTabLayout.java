@@ -59,6 +59,8 @@ public class UltimateTabLayout extends FrameLayout {
 
     private Context context;
 
+    private OnClickTabListener onClickTabListener;
+
     public UltimateTabLayout(Context context) {
         super(context);
         this.context = context;
@@ -137,6 +139,9 @@ public class UltimateTabLayout extends FrameLayout {
                 verticalSlingTabView.setPaintUnderLine(mPaintUnderLine);
                 verticalSlingTabView.setTabModel(tabModel);
                 verticalSlingTabView.setViewPager(viewPager, tabAdapterIF);
+                if (onClickTabListener != null){
+                    verticalSlingTabView.setOnClickTabListener(onClickTabListener);
+                }
                 this.addView(verticalSlingTabView);
             }
             else {
@@ -144,6 +149,9 @@ public class UltimateTabLayout extends FrameLayout {
                 horizontalSlingTabView.setPaintUnderLine(mPaintUnderLine);
                 horizontalSlingTabView.setTabModel(tabModel);
                 horizontalSlingTabView.setViewPager(viewPager, tabAdapterIF);
+                if (onClickTabListener != null){
+                    horizontalSlingTabView.setOnClickTabListener(onClickTabListener);
+                }
                 this.addView(horizontalSlingTabView);
             }
         }
@@ -152,6 +160,9 @@ public class UltimateTabLayout extends FrameLayout {
             fixTabView.setPaintUnderLine(mPaintUnderLine);
             fixTabView.setTabModel(tabModel);
             fixTabView.setViewPager(viewPager, tabAdapterIF);
+            if (onClickTabListener != null){
+                fixTabView.setOnClickTabListener(onClickTabListener);
+            }
             this.addView(fixTabView);
         }
 
@@ -229,5 +240,9 @@ public class UltimateTabLayout extends FrameLayout {
 
     public void setTabResourceFont(String tabResourceFont) {
         this.tabResourceFont = tabResourceFont;
+    }
+
+    public void setOnClickTabListener(OnClickTabListener onClickTabListener) {
+        this.onClickTabListener = onClickTabListener;
     }
 }
