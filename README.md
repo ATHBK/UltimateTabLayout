@@ -19,6 +19,12 @@ UltimateTabLayout is a library that allows you to create a tab of viewpager with
   
   ![demo](ScreenShots/ultimate_tab_only_text.png)
 
+
+  ![demo](ScreenShots/ultimate_tab_badge_no_number.png)
+
+
+  ![demo](ScreenShots/ultimate_tab_badge_number.png)
+
 ---
 
 
@@ -58,7 +64,7 @@ Add this to your module's `build.gradle` file:
 
 ```gradle
 dependencies {
-	compile 'com.github.ATHBK:UltimateTabLayout:1.2.6'
+	compile 'com.github.ATHBK:UltimateTabLayout:1.3.0'
 }
 ```
 
@@ -107,6 +113,8 @@ There are several other attributes that can be used to configure color text, ico
 |tab_orientation      | orientation of each tab   |enum     |vertical or horizontal                            |
 |tab_height_under_line| height of under line 	  |dimension|update version 1.2.3                              |
 |tab_resource_font    | assets from resource' font|string   |update version 1.2.4                              |
+|tab_badge            | style's badge             |enum     |no_number or number (update version 1.3.0)        |
+
 * Tip: only use for style's fixed.
 If you want to auto align, you will tab_width = "0dp" with tab_orientation = "horizontal"
 or tab_height = "0dp" with tab_orientation = "vertical"
@@ -130,7 +138,9 @@ How to use in .
                     viewPager.setCurrentItem(currentPos);
             }
         });      
-	
+	// You use to this function for update count number notify with style number's badge.
+	tabLayout.setNumberBadge(tabPosition, count);
+
 	tabLayout.setViewPager(viewPager, adapter);
 ```
 
