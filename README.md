@@ -58,7 +58,7 @@ Add this to your module's `build.gradle` file:
 
 ```gradle
 dependencies {
-	compile 'com.github.ATHBK:UltimateTabLayout:1.2.5'
+	compile 'com.github.ATHBK:UltimateTabLayout:1.2.6'
 }
 ```
 
@@ -121,7 +121,17 @@ How to use in .
 ```java	
 	adapter = new FragmentAdapterDemo(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-        tabLayout.setViewPager(viewPager, adapter);
+	
+	//options. if you override onClickTabListener.
+        tabLayout.setOnClickTabListener(new OnClickTabListener() {
+            @Override
+            public void onClickTab(int currentPos) {
+                Log.e("LOG", "OnClickTab " + currentPos);
+                    viewPager.setCurrentItem(currentPos);
+            }
+        });      
+	
+	tabLayout.setViewPager(viewPager, adapter);
 ```
 
 ** Note: Adapter must implements IFTabAdapter
