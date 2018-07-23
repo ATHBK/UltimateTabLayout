@@ -26,14 +26,24 @@ public class MainActivity extends AppCompatActivity {
         adapter = new FragmentAdapterDemo(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
-//options. if you override onClickTabListener.
-//        tabLayout.setOnClickTabListener(new OnClickTabListener() {
-//            @Override
-//            public void onClickTab(int currentPos) {
-//                Log.e("LOG", "OnClickTab " + currentPos);
-//                    viewPager.setCurrentItem(currentPos);
-//            }
-//        });
+//        options. if you override onClickTabListener.
+        tabLayout.setOnClickTabListener(new OnClickTabListener() {
+            @Override
+            public void onClickTab(int currentPos) {
+                Log.e("LOG", "OnClickTab " + currentPos);
+                    viewPager.setCurrentItem(currentPos);
+                    if (currentPos == 1){
+                        tabLayout.setNumberBadge(currentPos, 0);
+                    }
+                    else {
+                        tabLayout.setNumberBadge(currentPos, 1);
+                    }
+            }
+        });
+
+
+
+
         tabLayout.setViewPager(viewPager, adapter);
     }
 }

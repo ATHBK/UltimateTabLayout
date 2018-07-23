@@ -21,6 +21,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_5a76585e0ea11966b85257d2e52a11b1246ac395.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/exploded-aar/UltimateTabLayout/ultimatetablayout/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5c713678a6689d21367006abc62fdcddbaf06e5c">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/UltimateTabLayout-ultimatetablayout-unspecified_4b27ddab969cbcd5a07867c8a3fe226d4e52d751.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/athbk/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
         jumboMode="false"
         optimize="true"
@@ -48,33 +66,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_f97da379c74f0ef9dda5020f3514703418823511.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_5a76585e0ea11966b85257d2e52a11b1246ac395.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/exploded-aar/UltimateTabLayout/ultimatetablayout/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1961a83256b5a188503c45fbeb08fb270cc96b9f">
-        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/UltimateTabLayout-ultimatetablayout-unspecified_4b27ddab969cbcd5a07867c8a3fe226d4e52d751.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -99,6 +90,15 @@
         revision="25.0.2"
         sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
         <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.3.1_e3a382d17cc63a5308405bf2b583513b436e4c8a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Volumes/HDD/Project/Project Android/Library/My Lib/UltimateTabLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.1_f97da379c74f0ef9dda5020f3514703418823511.jar" />
     </item>
     <item
         is-multidex="false"

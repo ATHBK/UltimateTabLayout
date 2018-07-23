@@ -54,6 +54,8 @@ public class UltimateTabLayout extends FrameLayout {
     private int tabOrientation;
 
     private String tabResourceFont; // update version 1.2.4
+    private int styleBadge = 0; // update version 1.2.7 // 0: none, 1: no-number, 2: number
+    private int tabBadgeSize = 10; // default
 
     private Paint mPaintUnderLine;
 
@@ -107,6 +109,13 @@ public class UltimateTabLayout extends FrameLayout {
 
         tabResourceFont = ta.getString(R.styleable.UltimateTabLayout_tab_resource_font);
 
+        styleBadge = ta.getInt(R.styleable.UltimateTabLayout_tab_badge, styleBadge);
+        int defaultSizeBadge = 10;
+        if (styleBadge == 1){
+            defaultSizeBadge = (int) DeviceDimensionsHelper.convertDpToPixel(9, context);
+        }
+        tabBadgeSize = (int) ta.getDimension(R.styleable.UltimateTabLayout_tab_badge_size, defaultSizeBadge);
+
         mPaintUnderLine = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaintUnderLine.setColor(tabUnderLineColor);
 
@@ -130,6 +139,8 @@ public class UltimateTabLayout extends FrameLayout {
                 .setTabTextColor(tabTextColor)
                 .setTabTextSize(tabTextSize)
                 .setTabResourceFont(tabResourceFont)
+                .setTabStyleBadge(styleBadge)
+                .setTabBadgeSize(tabBadgeSize)
                 .build();
 
 
@@ -244,5 +255,29 @@ public class UltimateTabLayout extends FrameLayout {
 
     public void setOnClickTabListener(OnClickTabListener onClickTabListener) {
         this.onClickTabListener = onClickTabListener;
+    }
+
+    public void setStyleBadge(int style){
+        this.styleBadge = style;
+    }
+
+    public void setTabEnableBadge(int[] arrays){
+
+    }
+
+    public void setNumberBadge(int tabPosition, int count){
+        if (tabStyle == 1) {
+            if (tabOrientation == VERTICAL) {
+                VerticalSlingTabView tabView = (VerticalSlingTabView) getChildAt(0);
+                tabView.setNumberBadge(tabPosition, count);
+            } else {
+                HorizontalSlingTabView tabView = (HorizontalSlingTabView) getChildAt(0);
+                tabView.setNumberBadge(tabPosition, count);
+            }
+        }
+        else {
+            FixTabView tabView = (FixTabView) getChildAt(0);
+            tabView.setNumberBadge(tabPosition, count);
+        }
     }
 }

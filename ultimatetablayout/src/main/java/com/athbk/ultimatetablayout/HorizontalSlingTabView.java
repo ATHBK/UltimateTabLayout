@@ -159,6 +159,13 @@ public class HorizontalSlingTabView extends HorizontalScrollView implements View
                 tabView.setHeight(tabModel.getTabHeight());
                 tabView.setWidth(tabModel.getTabWidth());
                 tabView.setTabResourceFont(tabModel.getTabResourceFont());
+                if (tabAdapterIF.isEnableBadge(i)) {
+                    tabView.setStyleBadge(tabModel.getTabStyleBadge());
+                }
+                else {
+                    tabView.setStyleBadge(0);
+                }
+                tabView.setBadgeSize(tabModel.getTabBadgeSize());
                 tabView.setCurrentPos(i);
                 tabView.setOnClickTabListener(new OnClickTabListener() {
                     @Override
@@ -213,5 +220,15 @@ public class HorizontalSlingTabView extends HorizontalScrollView implements View
 
     public void setOnClickTabListener(OnClickTabListener onClickTabListener) {
         this.onClickTabListener = onClickTabListener;
+    }
+
+    public void setNumberBadge(int tabPosition, int count){
+        try {
+            TabView childView = (TabView) getChildAt(tabPosition);
+            childView.setNumberBadge(count);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

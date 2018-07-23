@@ -9,10 +9,12 @@ import android.support.annotation.Nullable;
 import android.text.Layout;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -54,7 +56,12 @@ public class TabView extends LinearLayout implements View.OnClickListener {
     private int height;
     private int width;
 
+    private int styleBadge = 0; // 0: none, 1: no-number, 2: number
+    private int badgeSize = 0;
+
     private ImageView ivIcon;
+    private FrameLayout badgeLayout;
+    private BadgeView badgeView;
     private TextView tvTitle;
 
     private String tabResourceFont;
@@ -94,6 +101,10 @@ public class TabView extends LinearLayout implements View.OnClickListener {
             ivIcon.setImageResource(icon);
             LayoutParams params = new LayoutParams(widthIcon, heightIcon);
             ivIcon.setLayoutParams(params);
+            if (styleBadge != 0) {
+                initBadgeView(context);
+            }
+
         }
 
         if (!TextUtils.isEmpty(title)){
@@ -110,7 +121,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
             tvTitle.setLayoutParams(textLayoutParams);
         }
 
-        if (!TextUtils.isEmpty(tabResourceFont)){
+        if (!TextUtils.isEmpty(tabResourceFont) && tvTitle != null){
             try {
                 Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), tabResourceFont);
                 tvTitle.setTypeface(typeface);
@@ -124,7 +135,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
         switch (positionIcon){
             case 0:
                 setOrientation(HORIZONTAL);
-                this.addSubView(ivIcon);
+                this.addSubViewIcon();
                 this.addSubView(tvTitle);
                 if (tvTitle!=null) {
                     tvTitle.setPadding(paddingIcon, 0, 0, 0);
@@ -133,14 +144,14 @@ public class TabView extends LinearLayout implements View.OnClickListener {
             case 1:
                 setOrientation(HORIZONTAL);
                 this.addSubView(tvTitle);
-                this.addSubView(ivIcon);
+                this.addSubViewIcon();
                 if (tvTitle!=null) {
                     tvTitle.setPadding(0, 0, paddingIcon, 0);
                 }
                 break;
             case 2:
                 setOrientation(VERTICAL);
-                this.addSubView(ivIcon);
+                this.addSubViewIcon();
                 this.addSubView(tvTitle);
                 if (tvTitle!=null) {
                     tvTitle.setPadding(0, paddingIcon, 0, 0);
@@ -149,7 +160,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
             case 3:
                 setOrientation(VERTICAL);
                 this.addSubView(tvTitle);
-                this.addSubView(ivIcon);
+                this.addSubViewIcon();
                 if (tvTitle!=null) {
                     tvTitle.setPadding(0, 0, 0, paddingIcon);
                 }
@@ -162,6 +173,42 @@ public class TabView extends LinearLayout implements View.OnClickListener {
         setGravity(Gravity.CENTER);
         setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
 //        requestLayout();
+    }
+
+    private void initBadgeView(Context context){
+        int px4 = (int) DeviceDimensionsHelper.convertDpToPixel(4, context);
+        int px12 = (int) DeviceDimensionsHelper.convertDpToPixel(12, context);
+
+        badgeLayout = new FrameLayout(context);
+//        badgeLayout.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_dark));
+
+        FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+        badgeLayout.setLayoutParams(layoutParams);
+//        badgeLayout.setPadding(px12, px4, px12, px4);
+
+        badgeView = new BadgeView(context, styleBadge, badgeSize);
+
+        if (styleBadge == 1){
+
+        }
+        else if (styleBadge == 2){
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.TOP | Gravity.RIGHT;
+            params.setMargins(30,0, 0, 0);
+            badgeView.setLayoutParams(params);
+
+        }
+        badgeLayout.addView(ivIcon);
+        badgeLayout.addView(badgeView);
+    }
+
+    private void addSubViewIcon(){
+        if (styleBadge == 0) {
+            this.addSubView(ivIcon);
+        }
+        else {
+            this.addSubView(badgeLayout);
+        }
     }
 
     private void addSubView(View view){
@@ -244,6 +291,18 @@ public class TabView extends LinearLayout implements View.OnClickListener {
 
     public void setCurrentPos(int currentPos) {
         this.currentPos = currentPos;
+    }
+
+    public void setStyleBadge(int styleBadge) {
+        this.styleBadge = styleBadge;
+    }
+
+    public void setBadgeSize(int badgeSize) {
+        this.badgeSize = badgeSize;
+    }
+
+    public void setNumberBadge(int count){
+        if (badgeView != null) badgeView.setNumberBadge(count);
     }
 
     @Override

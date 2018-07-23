@@ -30,11 +30,19 @@ public class FragmentAdapterDemo extends FragmentPagerAdapter implements IFTabAd
 
     @Override
     public String getTitle(int position) {
-        return "TAB " + position;
+        return "";
     }
 
     @Override
     public int getIcon(int position) {
-        return 0;
+        return R.drawable.tab_1_selected;
+    }
+
+    @Override
+    public boolean isEnableBadge(int position) {
+        if (position == 0){
+            return true;
+        }
+        return false;
     }
 }

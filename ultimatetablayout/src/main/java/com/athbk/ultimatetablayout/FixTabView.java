@@ -140,6 +140,13 @@ public class FixTabView extends LinearLayout implements ViewPager.OnPageChangeLi
                 tabView.setWidth((int)tabModel.getTabWidth());
                 tabView.setTabResourceFont(tabModel.getTabResourceFont());
                 tabView.setCurrentPos(i);
+                if (tabAdapterIF.isEnableBadge(i)) {
+                    tabView.setStyleBadge(tabModel.getTabStyleBadge());
+                }
+                else {
+                    tabView.setStyleBadge(0);
+                }
+                tabView.setBadgeSize(tabModel.getTabBadgeSize());
                 tabView.setOnClickTabListener(new OnClickTabListener() {
                     @Override
                     public void onClickTab(int currentPos) {
@@ -176,5 +183,15 @@ public class FixTabView extends LinearLayout implements ViewPager.OnPageChangeLi
 
     public void setOnClickTabListener(OnClickTabListener onClickTabListener) {
         this.onClickTabListener = onClickTabListener;
+    }
+
+    public void setNumberBadge(int tabPosition, int count){
+        try {
+            TabView childView = (TabView) getChildAt(tabPosition);
+            childView.setNumberBadge(count);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

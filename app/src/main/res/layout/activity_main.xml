@@ -18,6 +18,7 @@
         app:tab_resource_font="font/Roboto-BoldItalic.ttf"
         app:tab_width="100dp"
         app:tab_text_color="@color/tab_color_seleted"
+        app:tab_badge="number"
         />
 
     <android.support.v4.view.ViewPager

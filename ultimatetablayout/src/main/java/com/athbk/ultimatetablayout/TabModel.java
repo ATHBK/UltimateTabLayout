@@ -29,6 +29,8 @@ public class TabModel {
     private int tabOrientation;
 
     private String tabResourceFont; // update version 1.2.4
+    private int tabStyleBadge = 0; // update version 1.2.7
+    private int tabBadgeSize;
 
     public TabModel(Builder builder){
         this.tabTextSize = builder.tabTextSize;
@@ -54,6 +56,8 @@ public class TabModel {
         this.tabOrientation = builder.tabOrientation;
 
         this.tabResourceFont = builder.tabResourceFont;
+        this.tabStyleBadge = builder.tabStyleBadge;
+        this.tabBadgeSize = builder.tabBadgeSize;
     }
 
     public static class Builder {
@@ -80,6 +84,8 @@ public class TabModel {
         private int tabOrientation;
 
         private String tabResourceFont; // update version 1.2.4
+        private int tabStyleBadge = 0; // update version 1.2.7
+        private int tabBadgeSize;
 
         public Builder(boolean tabUnderLineShow, int tabHeightUnderLine, int tabOrientation) {
             this.tabUnderLineShow = tabUnderLineShow;
@@ -152,6 +158,16 @@ public class TabModel {
             return this;
         }
 
+        public Builder setTabStyleBadge(int tabStyleBadge) {
+            this.tabStyleBadge = tabStyleBadge;
+            return this;
+        }
+
+        public Builder setTabBadgeSize(int tabBadgeSize) {
+            this.tabBadgeSize = tabBadgeSize;
+            return this;
+        }
+
         public TabModel build(){
             return new TabModel(this);
         }
@@ -220,5 +236,13 @@ public class TabModel {
 
     public String getTabResourceFont() {
         return tabResourceFont;
+    }
+
+    public int getTabStyleBadge() {
+        return tabStyleBadge;
+    }
+
+    public int getTabBadgeSize() {
+        return tabBadgeSize;
     }
 }
